@@ -1,0 +1,19 @@
+{
+  "records": [{
+    "nick": "Jon Snow",
+    "family": "Stark",
+    "season": "1"
+  }, {
+    "nick": "Sansa",
+    "family": "Stark",
+    "season": "2"
+  }, {
+    "nick": "Tyrion",
+    "family": "Lannister",
+    "season": "3"
+  }, {
+    "nick": "Nestor",
+    "family": "Kirchner",
+    "season": "4"
+  }]
+}

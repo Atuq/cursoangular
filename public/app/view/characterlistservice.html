@@ -1,0 +1,72 @@
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-12" align="center">
+			<h2> Characters in the story</h2>
+		</div>
+	</div>
+	<div class="row">
+		<br>
+		<br>
+		<br>
+	</div>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-2">
+			<label> Name: </label>
+			<input type="text" ng-model="search.nick"/>
+		</div>
+		<div class="col-md-1">
+			<p>Family
+				<select ng-model="search.family">
+					<option ng-repeat="character in characters" value="{{character.family}}" with="80">
+						{{character.family}}
+					</option>
+				</select>
+			</p>
+		</div>
+		<div class="col-md-1" align="left">
+			<p>Season
+				<select ng-model="search.season">
+					<option ng-repeat="character in characters" value="{{character.season}}">
+						{{character.season}}
+					</option>
+				</select>
+			</p>
+		</div>
+		<div class="col-md-3" align="left">
+			<br>
+			<button ng-click="clearFilters()">Clear filters</button>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+	<div class="row">
+		<br>
+	</div>	
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<table style="width:80%" border>
+				<tr ng-repeat="character in characters | filter:search:strict | orderBy: nick">
+					<td ng-bind="character.nick"></td>
+					<td ng-bind="character.family"></td>
+					<td ng-bind="character.season" align="center"></td>
+					<td align="center">
+						<a href="#servurl/{{character.nick}}/{{character.family}}/{{character.season}}">details</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-7"></div>
+		<div class="col-md-5" align="left">
+			<a href="#addcharacter">Add new Character</a>
+		</div>
+	</div>
+	<div class="row">
+		{{error}}
+	</div>
+</div>
+

@@ -1,0 +1,36 @@
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-2">
+			<div class="row"  align="center">
+				<h2>New character</h2>
+			</div>
+		</div>
+		<div class="col-md-4">	
+			<div class="row" align="right">
+				<label>
+					Nick:
+				</label>
+				<input type="text" ng-model="newcharacter.nick"/>
+			</div>
+			<div class="row" align="right">
+				<label>
+					Family:
+				</label>
+				<input type="text" ng-model="newcharacter.family"/>
+			</div>
+			<div class="row" align="right">
+				<label>
+					Season:
+				</label>
+				<input type="text" ng-model="newcharacter.season"/>
+			</div>
+			<div class="row" align="right">
+				<br>
+				<button ng-click="addCharacter()">
+					Add Character
+				</button>		
+			</div>
+		</div>
+		<div class="col-md-6"></div>
+	</div>
+</div>
